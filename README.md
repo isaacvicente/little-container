@@ -1,4 +1,4 @@
-# little container - written in Go
+# 📦 Little Container
 
 This is a tiny container based in Docker. It has just the "run" command
 implemented, without the "image' implementation. As of now, only Ubuntu works
@@ -22,7 +22,7 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-You're now in a Ubuntu VM. There's still a few things you neeed to do.
+You're now in a Ubuntu VM. There's still a few things you need to do.
 
 Still in the VM, run:
 
