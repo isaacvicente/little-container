@@ -4,9 +4,10 @@ This is a tiny container based in Docker. It has just the "run" command
 implemented, without the "image' implementation. As of now, only Ubuntu works
 inside the container.
 
-The code was taken from [Liz Rice talk](https://youtu.be/oSlheqvaRso).
+The code was taken from Liz Rice talks: [1](https://youtu.be/oSlheqvaRso) and [2](https://youtu.be/jeTKgAEyhsA).
 
-> Warning: It only works on Ubuntu 22.04 LTS Jammy Jellyfish.
+> **Warning**
+> It only works on Ubuntu 22.04 LTS Jammy Jellyfish.
 
 ## Dependencies
 
@@ -31,12 +32,29 @@ $ sudo apt install qemu-user-static
 $ sudo systemctl restart systemd-binfmt.service
 ```
 
-## Run
+## Setup
 
-Switch to *root* user with `sudo su -` and then:
+Clone the repo:
 
 ```
-# go run main.go run /bin/bash
+$ git clone https://github.com/isaacvicente/little-container.git
+```
+
+Run the `setup` script:
+
+```bash
+$ cd little-conteiner && ./setup
+``
+
+## Run
+
+Run the little container in rootless mode by:
+
+```
+$ go run main.go run bash
 ```
 
 Now you're inside the container!
+
+> **Note**
+> Only the `run` command was implemented.
