@@ -44,7 +44,7 @@ Run the `setup` script:
 
 ```bash
 $ cd little-conteiner && ./setup
-``
+```
 
 ## Run
 
