@@ -46,8 +46,6 @@ In order to have the Ubuntu Base filesystem, run the `setup` script:
 $ cd little-conteiner && ./setup
 ```
 
-> If it asks for `sudo`
-
 ## Run
 
 Run the little container in rootless mode by:
