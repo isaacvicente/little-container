@@ -1,10 +1,10 @@
 # 📦 Little Container
 
-This is a tiny container based in Docker. It has just the "run" command
-implemented, without the "image' implementation. As of now, only Ubuntu works
-inside the container.
+This is a tiny container based in Docker. It uses a Ubuntu 22.04 Jammy Jellyfish
+Base image.
 
-The code was taken from Liz Rice talks: [1](https://youtu.be/oSlheqvaRso) and [2](https://youtu.be/jeTKgAEyhsA).
+The code was taken from Liz Rice talks: [1](https://youtu.be/oSlheqvaRso) and
+[2](https://youtu.be/jeTKgAEyhsA).
 
 > **Warning**
 > It only works on Ubuntu 22.04 LTS Jammy Jellyfish.
@@ -40,11 +40,13 @@ Clone the repo:
 $ git clone https://github.com/isaacvicente/little-container.git
 ```
 
-Run the `setup` script:
+In order to have the Ubuntu Base filesystem, run the `setup` script:
 
 ```bash
 $ cd little-conteiner && ./setup
 ```
+
+> If it asks for `sudo`
 
 ## Run
 
@@ -58,3 +60,6 @@ Now you're inside the container!
 
 > **Note**
 > Only the `run` command was implemented.
+> Also, you cannot use the `apt` command to install or
+> update packages inside the container, as the base
+> system doesn't have the packages to sign GPG keys.
